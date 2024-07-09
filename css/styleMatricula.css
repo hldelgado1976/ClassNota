@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+/* CSS actual */
+#sidebarMenu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #343a40;
+  transition: left 0.3s ease;
+  z-index: 1050;
+  box-shadow: 2px 0 5px rgba(219, 219, 219, 0.5);
+}
+
+#sidebarMenu.show {
+  left: 0;
+}
+
+.sidebar-link {
+  color: #ffffff;
+  padding: 15px 20px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  background-color: #898c8f;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.close-hamburger {
+  font-size: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+}
+
+.navbar {
+  background-color: #898c8f;
+  padding: 10px;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #d4d4d4;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-group input[type="date"],
+.form-group input[type="time"] {
+  width: auto;
+}
+.form-section-title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+.button-group button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.button-group button:hover {
+  background-color: #0056b3;
+}
+.inline-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.inline-group .form-group {
+  flex: 1;
+  min-width: 150px;
+}
+#certificado {
+  background-color: rgb(110, 35, 35);
+}
+#imprimir {
+  background-color: #5b4949;
+}
+#nuevobtn {
+  background-color: #0056b3;
+}
+#grabar {
+  width: 100%;
+  background-color: #2dae13;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+#eliminar {
+  background-color: #f43117;
+}
+#modificar {
+  background-color: #e19a02;
+}

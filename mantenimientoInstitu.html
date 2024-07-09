@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styleManInsti.css" />
+    <title>Formulario de Institución</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <span class="navbar-toggler-icon hamburger" id="hamburgerMenu"></span>
+        <h3>Administrador</h3>
+        <a class="navbar-brand">Admin</a>
+      </div>
+    </nav>
+
+    <div id="sidebarMenu">
+      <span id="closeSidebar" class="close-hamburger">&times;</span>
+      <br />
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link sidebar-link" href="inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Usuarios</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="mantenimientoUsuarios.html"
+                >Usuario</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Mantenimiento</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="mantenimientoCurso.html">Cursos</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoParalelo.html"
+                >Paralelo</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoAsig.html"
+                >Asignaturas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="cargaAcademica.html"
+                >Plan de Estudio</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoInstitu.html"
+                >Instituciones</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoDocente.html"
+                >Docentes</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoAlumno.html"
+                >Alumno</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Registro-Calificaciones</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="registroMatricula.html"
+                >Registro de Matriculas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="registroNotas.html"
+                >Registro Notas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="modificarNotas.html"
+                >Modificar Notas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="calculoProm.html"
+                >Calculo Promedios</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="asignaturasRelacion.html"
+                >Relacion Asignaturas</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Boletines</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="crearBoletin.html"
+                >Generacion Boletines</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="promedioBoletin.html"
+                >Generacion Boletines Promedio</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="crearBoletinMasivo.html"
+                >Generacion Boletines Masivo</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Reportes</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="calculoProm.html"
+                >Listado de Alumnos</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="listadoDocente.html"
+                >Listado de Docentes</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link sidebar-link" href="index.html">Salir</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1>Formulario de Institución</h1>
+      <form id="institucionForm">
+        <label for="institucion">Institución:</label>
+        <input type="text" id="institucion" name="institucion" required />
+
+        <label for="seccion">Sección:</label>
+        <select id="seccion" name="seccion" required>
+          <option value="">Seleccione una opción</option>
+          <option value="matutino">Matutino</option>
+          <option value="diurna">Diurna</option>
+          <option value="ambos">Ambos</option>
+        </select>
+
+        <label for="regimen">Regimen:</label>
+        <select id="regimen" name="regimen" required>
+          <option value="">Seleccione un regimen</option>
+          <option value="azuay">Costa</option>
+          <option value="bolivar">Sierra</option>
+
+          <!-- Agregar más provincias según sea necesario -->
+        </select>
+
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia" required>
+          <option value="">Seleccione una provincia</option>
+          <option value="azuay">Azuay</option>
+          <option value="bolivar">Bolívar</option>
+          <option value="canar">Cañar</option>
+          <!-- Agregar más provincias según sea necesario -->
+        </select>
+
+        <label for="ciudad">Ciudad:</label>
+        <select id="ciudad" name="ciudad" required>
+          <option value="">Seleccione una ciudad</option>
+          <option value="cuenca">Cuenca</option>
+          <option value="guaranda">Guaranda</option>
+          <option value="azogues">Azogues</option>
+          <!-- Agregar más ciudades según sea necesario -->
+        </select>
+
+        <label for="distrito">Distrito:</label>
+        <select id="distrito" name="distrito" required>
+          <option value="">Seleccione un distrito</option>
+          <option value="distrito1">Distrito 1</option>
+          <option value="distrito2">Distrito 2</option>
+          <option value="distrito3">Distrito 3</option>
+          <!-- Agregar más distritos según sea necesario -->
+        </select>
+
+        <label for="rector">Rector:</label>
+        <input type="text" id="rector" name="rector" required />
+
+        <label for="ruc">RUC:</label>
+        <input type="number" id="ruc" name="ruc" required />
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <div class="params">
+          <h2>Parámetros</h2>
+          <label for="maximo">Máximo:</label>
+          <input type="number" id="maximo" name="maximo" required />
+
+          <label for="minimoAprobacion">Mínimo Aprobación:</label>
+          <input
+            type="number"
+            id="minimoAprobacion"
+            name="minimoAprobacion"
+            required
+          />
+
+          <label for="minimoSupletorio">Mínimo Supletorio:</label>
+          <input
+            type="number"
+            id="minimoSupletorio"
+            name="minimoSupletorio"
+            required
+          />
+
+          <div class="input-group">
+            <label for="de">De:</label>
+            <input type="number" id="de" name="de" step="0.01" required />
+
+            <label for="has">Hasta:</label>
+            <input type="number" id="has" name="has" step="0.01" required />
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" id="mod" class="button" onclick="modificar()">
+            Modificar
+          </button>
+          <button type="submit" id="save" class="button">Guardar</button>
+          <button type="button" id="new" class="button" onclick="nuevo()">
+            Nuevo
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("hamburgerMenu")
+        .addEventListener("click", function () {
+          var sidebar = document.getElementById("sidebarMenu");
+          sidebar.classList.add("show");
+        });
+
+      document
+        .getElementById("closeSidebar")
+        .addEventListener("click", function () {
+          var sidebar = document.getElementById("sidebarMenu");
+          sidebar.classList.remove("show");
+        });
+    </script>
+    <script>
+      function modificar() {
+        // Función para modificar el formulario
+        alert("Modificar");
+      }
+
+      function nuevo() {
+        // Función para limpiar el formulario para un nuevo registro
+        document.getElementById("institucionForm").reset();
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+/* CSS actual */
+#sidebarMenu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #343a40;
+  transition: left 0.3s ease;
+  z-index: 1050;
+  box-shadow: 2px 0 5px rgba(219, 219, 219, 0.5);
+}
+
+#sidebarMenu.show {
+  left: 0;
+}
+
+.sidebar-link {
+  color: #ffffff;
+  padding: 15px 20px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  background-color: #898c8f;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.close-hamburger {
+  font-size: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+}
+
+.navbar {
+  background-color: #898c8f;
+  padding: 10px;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #d4d4d4;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+input,
+textarea,
+select {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #5cb85c;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #4cae4c;
+}
+.lessons {
+  margin-top: 20px;
+}
+.lesson-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.lesson-item input {
+  flex: 1;
+  margin-right: 10px;
+}
+.lesson-item button {
+  background: #d9534f;
+}
+.lesson-item button:hover {
+  background: #c9302c;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seleccionar Colegio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bienvenido Docente Julian</h1>
+      <br />
+      <h2>Seleccionar Colegio</h2>
+      <form id="schoolForm">
+        <div class="form-group">
+          <label for="colegio">Elige un colegio:</label>
+          <select id="colegio" name="colegio">
+            <option value="">Selecciona un colegio</option>
+            <option value="inicio.html">Colegio 1</option>
+            <option value="inicio.html">Colegio 2</option>
+            <option value="inicio.html">Colegio 3</option>
+            <option value="inicio.html">Colegio 4</option>
+          </select>
+        </div>
+        <button type="submit">Ir al Colegio</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("schoolForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const selectedSchool = document.getElementById("colegio").value;
+          if (selectedSchool) {
+            window.location.href = selectedSchool;
+          } else {
+            alert("Por favor, selecciona un colegio.");
+          }
+        });
+    </script>
+  </body>
+</html>

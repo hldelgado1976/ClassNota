@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylePlan.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Plan de Estudio</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <span class="navbar-toggler-icon hamburger" id="hamburgerMenu"></span>
+        <h3>Administrador</h3>
+        <a class="navbar-brand">Admin</a>
+      </div>
+    </nav>
+
+    <div id="sidebarMenu">
+      <span id="closeSidebar" class="close-hamburger">&times;</span>
+      <br />
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link sidebar-link" href="inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Usuarios</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="mantenimientoUsuarios.html"
+                >Usuario</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Mantenimiento</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="mantenimientoCurso.html">Cursos</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoParalelo.html"
+                >Paralelo</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoAsig.html"
+                >Asignaturas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="cargaAcademica.html"
+                >Plan de Estudio</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoInstitu.html"
+                >Instituciones</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoDocente.html"
+                >Docentes</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="mantenimientoAlumno.html"
+                >Alumno</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Registro-Calificaciones</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="registroMatricula.html"
+                >Registro de Matriculas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="registroNotas.html"
+                >Registro Notas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="modificarNotas.html"
+                >Modificar Notas</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="calculoProm.html"
+                >Calculo Promedios</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="asignaturasRelacion.html"
+                >Relacion Asignaturas</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Boletines</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="crearBoletin.html"
+                >Generacion Boletines</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="promedioBoletin.html"
+                >Generacion Boletines Promedio</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="crearBoletinMasivo.html"
+                >Generacion Boletines Masivo</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle sidebar-link"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Reportes</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="calculoProm.html"
+                >Listado de Alumnos</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="listadoDocente.html"
+                >Listado de Docentes</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link sidebar-link" href="index.html">Salir</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1>Crear Plan de Estudio</h1>
+      <form id="study-plan-form">
+        <label for="course-name">Nombre del Curso:</label>
+        <input type="text" id="course-name" name="course-name" required />
+
+        <label for="course-description">Descripción del Curso:</label>
+        <textarea
+          id="course-description"
+          name="course-description"
+          rows="4"
+          required
+        ></textarea>
+
+        <label for="instructor">Instructor:</label>
+        <input type="text" id="instructor" name="instructor" required />
+
+        <label for="duration">Duración (en semanas):</label>
+        <input type="number" id="duration" name="duration" required />
+
+        <label for="important-dates">Fechas Importantes:</label>
+        <input
+          type="text"
+          id="important-dates"
+          name="important-dates"
+          placeholder="Ej: 01/01/2024 - 31/01/2024"
+          required
+        />
+
+        <div class="lessons">
+          <h2>Lecciones</h2>
+          <div id="lesson-container">
+            <div class="lesson-item">
+              <input
+                type="text"
+                name="lessons[]"
+                placeholder="Nombre de la Lección"
+                required
+              />
+              <button type="button" onclick="removeLesson(this)">
+                Eliminar
+              </button>
+            </div>
+          </div>
+          <button
+            type="button"
+            onclick="addLesson()"
+            style="margin-bottom: 10px; margin-top: 10px"
+          >
+            Agregar Lección
+          </button>
+        </div>
+
+        <button type="submit">Crear Plan de Estudio</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("hamburgerMenu")
+        .addEventListener("click", function () {
+          var sidebar = document.getElementById("sidebarMenu");
+          sidebar.classList.add("show");
+        });
+
+      document
+        .getElementById("closeSidebar")
+        .addEventListener("click", function () {
+          var sidebar = document.getElementById("sidebarMenu");
+          sidebar.classList.remove("show");
+        });
+    </script>
+    <script>
+      function addLesson() {
+        const lessonContainer = document.getElementById("lesson-container");
+        const lessonItem = document.createElement("div");
+        lessonItem.className = "lesson-item";
+        lessonItem.innerHTML = `
+                <input type="text" name="lessons[]" placeholder="Nombre de la Lección" required>
+                <button type="button" onclick="removeLesson(this)">Eliminar</button>
+            `;
+        lessonContainer.appendChild(lessonItem);
+      }
+
+      function removeLesson(button) {
+        button.parentElement.remove();
+      }
+
+      document
+        .getElementById("study-plan-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Aquí puedes agregar el código para enviar el formulario a tu servidor
+          alert("Plan de Estudio creado con éxito!");
+        });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
